@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Typing Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Typing Practice System</h1>
+
+<!-- LOGIN -->
+<button onclick="login()">Login with Google</button>
+<p id="userName"></p>
+
+<h2 id="timer">Time: 0:00</h2>
+
+<div class="progress-bar">
+    <div id="progress"></div>
+</div>
+
+<div class="typing-wrapper">
+
+    <div class="top-bar">
+        <select id="level">
+            <option value="easy">Easy</option>
+            <option value="medium" selected>Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+    </div>
+
+    <div class="typing-box" onclick="document.getElementById('input').focus()">
+        <p id="text">Click Start to begin...</p>
+        <textarea id="input"></textarea>
+    </div>
+
+    <div class="controls">
+        <label>Time (seconds):</label>
+        <input type="number" id="customTime" value="420">
+    </div>
+
+    <button class="start-btn">Start</button>
+
+</div>
+
+<!-- RESULT -->
+<div id="resultBox" class="result-popup hidden"></div>
+
+<!-- LEADERBOARD -->
+<h2>🏆 Leaderboard</h2>
+<div id="leaderboardList"></div>
+<button onclick="loadLeaderboard()">Refresh Leaderboard</button>
+
+<audio id="endSound" src="https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg"></audio>
+
+<!-- IMPORTANT -->
+<script type="module" src="script.js"></script>
+
+</body>
+</html>
